@@ -1,0 +1,77 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# /Users/runner/work/bioconda-recipes/bioconda-recipes/recipes/delly, last modified Tue Feb  8 09:24:25 2022
+# ------------------------------------------------
+
+package:
+  name: delly
+  version: plocal
+source:
+  git_rev: plocal
+  git_url: https://github.com/panguangze/delly.git
+requirements:
+  build:
+    - ca-certificates
+    - cctools_osx-64
+    - clang
+    - clang-11
+    - clang_osx-64
+    - clangxx
+    - clangxx_osx-64
+    - compiler-rt
+    - compiler-rt_osx-64
+    - ld64_osx-64
+    - libclang-cpp11.1
+    - libcxx
+    - libllvm11
+    - libzlib
+    - llvm-tools
+    - make
+    - openssl
+    - sigtool
+    - tapi
+    - zlib
+  host:
+    - boost-cpp
+    - bzip2
+    - c-ares
+    - ca-certificates
+    - htslib
+    - icu
+    - krb5
+    - libcurl
+    - libcxx
+    - libdeflate
+    - libedit
+    - libev
+    - libnghttp2
+    - libssh2
+    - libzlib
+    - lz4-c
+    - ncurses
+    - openssl
+    - tk
+    - xz
+    - zlib
+    - zstd
+  run:
+    - boost-cpp >=1.74.0,<1.74.1.0a0
+    - bzip2 >=1.0.8,<2.0a0
+    - bzip2 >=1.0.8,<2.0a0
+    - htslib >=1.14,<1.15.0a0
+    - htslib >=1.14,<1.15.0a0
+    - libcxx >=11.1.0
+    - libzlib
+    - zlib
+test:
+  commands:
+    - delly --help
+about:
+  home: https://github.com/dellytools/delly
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Structural variant discovery by integrated paired-end and split-read analysis
+extra:
+  copy_test_source_files: true
+  final: true
